@@ -1,5 +1,9 @@
 ## Spring Cookbook
 
+**Coupling in Java?**
+
+A situation where an object can be used by another object is termed as coupling. It is the process of collaborating together and working for each other. It simply means that one object requires another object to complete its assigned task. It is basically the usage of an object by another object, thereby reducing the dependency between the modules. It is called as collaboration if one class calls the logic of another class. 
+
 **What is Tight Coupling?**
 
 When a class **(ClassA)** is dependent on another class’s object **(ClassB)**, then we say **ClassA** is "tightly" Coupled with **ClassB**. Spring helps us to create classes in a way that Tight Coupling can be removed and Loose Coupling can be done.
