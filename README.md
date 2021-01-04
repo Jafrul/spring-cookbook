@@ -34,7 +34,7 @@ This annotation is used on a class that needs to be taken by spring on a primary
 
 **6. What is Dependency Injection?**
 
-Dependency Injection is where Spring searches for beans; once the appropriate bean is found, it autowires the bean to the dependent class. Dependency Injection is the process where Spring framework looks for the beans and identifies the dependencies, and creates the instances of beans and autowires them.
+**Dependency Injection** is a fundamental aspect of the **Spring** framework, through which the **Spring** container **injects** objects into other objects or **dependencies**. Simply put, this allows for loose coupling of components and moves the responsibility of managing components onto the container.
 
 **7. Explain Inversion of Control (IOC).**
 
