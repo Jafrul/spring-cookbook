@@ -2,15 +2,69 @@
 
 **Coupling in Java?**
 
-A situation where an object can be used by another object is termed as coupling. It is the process of collaborating together and working for each other. It simply means that one object requires another object to complete its assigned task. It is basically the usage of an object by another object, thereby reducing the dependency between the modules. It is called as collaboration if one class calls the logic of another class. 
+**A situation where an object can be used by another object is termed as coupling.** It is the process of collaborating together and working for each other. It simply means that one object requires another object to complete its assigned task. It is basically the usage of an object by another object, thereby reducing the dependency between the modules. It is called as collaboration if one class calls the logic of another class. 
 
 **What is Tight Coupling?**
 
-When a class **(ClassA)** is dependent on another class’s object **(ClassB)**, then we say **ClassA** is "tightly" Coupled with **ClassB**. Spring helps us to create classes in a way that Tight Coupling can be removed and Loose Coupling can be done.
+When a class **(ClassA)** is dependent on another class’s object **(ClassB)**, then we say **ClassA** is **tightly Coupled** with **ClassB**. Spring helps us to create classes in a way that Tight Coupling can be removed and Loose Coupling can be done.
+
+**Example :** If you want to change the skin, you would also have to change the design of your body as well because the two are joined together – they are tightly coupled. The best example of tight coupling is RMI(Remote Method Invocation).
+
+```
+// Java program to illustrate 
+// tight coupling concept 
+class Subject { 
+    Topic t = new Topic(); 
+    public void startReading() 
+    { 
+        t.understand(); 
+    } 
+} 
+class Topic { 
+    public void understand() 
+    { 
+        System.out.println("Tight coupling concept"); 
+    } 
+} 
+```
+
+**Explanation:** In the above program the Subject class is dependents on Topic class. In the above program Subject class is tightly coupled with Topic class it means if any change in the Topic class requires Subject class to change. For example, if Topic class understand() method change to gotit() method then you have to change the startReading() method will call gotit() method instead of calling understand() method.
 
 **What is Loose Coupling?**
 
 Loose Coupling removes the dependency of an object **(ClassB)** on a class **(ClassA)**. Loose Coupling is approached by creating an interface and a setter & getter method, or by using a constructor which takes the interface object.
+
+**Example :** If you change your shirt, then you are not forced to change your body – when you can do that, then you have loose coupling. When you can’t do that, then you have tight coupling. The examples of Loose coupling are Interface, JMS.
+
+```
+// Java program to illustrate 
+// loose coupling concept 
+public interface Topic 
+{ 
+	void understand(); 
+} 
+class Topic1 implements Topic { 
+public void understand() 
+	{ 
+		System.out.println("Got it"); 
+	} 
+} class Topic2 implements Topic { 
+public void understand() 
+	{ 
+		System.out.println("understand"); 
+	} 
+} public class Subject { 
+public static void main(String[] args) 
+	{ 
+		Topic t = new Topic1(); 
+		t.understand(); 
+	} 
+} 
+```
+
+**Explanation :** In the above example, Topic1 and Topic2 objects are loosely coupled. It means Topic is an interface and we can inject any of the implemented classes at run time and we can provide service to the end user.
+
+
 
  **What are Beans in Spring?**
 
