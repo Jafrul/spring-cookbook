@@ -64,9 +64,7 @@ public static void main(String[] args)
 
 **Explanation :** In the above example, Topic1 and Topic2 objects are loosely coupled. It means Topic is an interface and we can inject any of the implemented classes at run time and we can provide service to the end user.
 
-
-
- **What are Beans in Spring?**
+**What are Beans in Spring?**
 
 When a class is annotated or decorated using the @Component, such a class is called a Bean in Spring. Beans are maintained by Application Context.
 
@@ -88,7 +86,12 @@ This annotation is used on a class that needs to be taken by spring on a primary
 
 **6. What is Dependency Injection?**
 
-**Dependency Injection** is a fundamental aspect of the **Spring** framework, through which the **Spring** container **injects** objects into other objects or **dependencies**. Simply put, this allows for loose coupling of components and moves the responsibility of managing components onto the container.
+**Dependency Injection** is a fundamental aspect of the **Spring** framework, through which the **Spring** container **injects** objects into other objects or **dependencies**. Simply put, this allows for loose coupling of components and moves the responsibility of managing components onto the container.Two ways to perform Dependency Injection in Spring framework
+
+Spring framework provides two ways to inject dependency :
+
+- By Constructor
+- By Setter method
 
 **7. Explain Inversion of Control (IOC).**
 
